@@ -26,3 +26,7 @@ bin-release/
 
 # macOS Folders
 .DS_Store
+
+# Royale and NPM
+bin/
+node_modules/

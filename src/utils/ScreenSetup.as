@@ -10,8 +10,8 @@
 
 package utils
 {
-    import flash.geom.Rectangle;
-    import flash.system.Capabilities;
+    import openfl.geom.Rectangle;
+    import openfl.system.Capabilities;
 
     public class ScreenSetup
     {

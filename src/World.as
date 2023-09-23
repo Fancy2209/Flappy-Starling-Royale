@@ -1,6 +1,6 @@
 package
 {
-    import flash.geom.Rectangle;
+    import openfl.geom.Rectangle;
 
     import starling.display.Image;
     import starling.display.MovieClip;

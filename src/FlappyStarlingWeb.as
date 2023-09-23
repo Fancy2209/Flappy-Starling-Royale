@@ -1,7 +1,7 @@
 package
 {
-    import flash.display.Sprite;
-
+    import openfl.utils.Assets;
+    import openfl.display.Sprite;
     import starling.assets.AssetManager;
     import starling.core.Starling;
     import starling.events.Event;
@@ -20,12 +20,20 @@ package
 
         private function onRootCreated(event:Event, game:Game):void
         {
-            var assets:AssetManager = new AssetManager();
-            assets.enqueue(EmbeddedAssets);
-            assets.loadQueue(
+            var _assets:AssetManager = new AssetManager();
+            _assets.enqueue([
+                Assets.getPath("assets/textures/1x/atlas.xml"),
+                Assets.getPath("assets/textures/1x/atlas.png"),
+                Assets.getPath("assets/fonts/1x/bradybunch.fnt"),
+                Assets.getPath("assets/fonts/1x/bradybunch.png"),
+                Assets.getPath("assets/sounds/flap.mp3"),
+                Assets.getPath("assets/sounds/pass.mp3"),
+                Assets.getPath("assets/sounds/crash.mp3")
+                ]);
+            _assets.loadQueue(
                 function onComplete():void
                 {
-                    game.start(assets);
+                    game.start(_assets);
                 },
                 function onError(error:String):void
                 {

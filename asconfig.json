@@ -1,55 +1,20 @@
 {
-	"config": "airmobile",
+	"config": "js",
+	"type": "app",
 	"compilerOptions": {
-		"output": "out/flappy.swf",
+		"source-map": true,
+		"targets": [
+			"JS"
+		],
+		"output": "./",
 		"source-path": [
 			"src"
-			// "../../starling/starling/src"
 		],
-		"library-path": [
-			"lib"
-		]
+		"external-library-path": [
+            "node_modules/openfl/dist/openfl.swc",
+			"node_modules/starling-framework/dist/starling.swc"
+        ]
 	},
-	"mainClass": "FlappyStarlingMobile",
-	"application": "src/FlappyStarling-app.xml",
-	"airOptions": {
-		"android": {
-			"output": "out/flappy.apk",
-			"listen": true,
-			"signingOptions": {
-				"storetype": "JKS",
-				"keystore": "../../../library/android/dev-key.keystore"
-			},
-			"resdir": "system/res"
-		},
-		"ios": {
-			"output": "out/flappy.ipa",
-			"listen": true,
-			"signingOptions": {
-				"storetype": "pkcs12",
-				"keystore": "../../../library/ios/daniel_dev_certificate.p12",
-				"provisioning-profile": "../../../library/ios/ios_dev_profile.mobileprovision"
-			}
-		},
-		"ios_simulator": {
-			"output": "out/flappy-simulator.ipa",
-			"platformsdk": "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk",
-			"target": "ipa-debug-interpreter-simulator",
-			"signingOptions": {
-				"storetype": "pkcs12",
-				"keystore": "../../../library/ios/daniel_dev_certificate.p12",
-				"provisioning-profile": "../../../library/ios/ios_dev_profile.mobileprovision"
-			}
-		},
-		"files": [
-			{
-				"file": "assets",
-				"path": "assets"
-			},
-			{
-				"file": "system",
-				"path": ""
-			}
-		]
-	}
+	"mainClass": "FlappyStarlingWeb",
+	"copySourcePathAssets": true
 }

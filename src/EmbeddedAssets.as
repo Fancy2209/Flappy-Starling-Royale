@@ -15,29 +15,12 @@ package
 
         // Texture Atlas
 
-        [Embed(source="../assets/textures/1x/atlas.xml", mimeType="application/octet-stream")]
-        public static const atlas_xml:Class;
-
-        [Embed(source="../assets/textures/1x/atlas.png")]
-        public static const atlas:Class;
-
-        // Bitmap Fonts
-
-        [Embed(source="../assets/fonts/1x/bradybunch.fnt", mimeType="application/octet-stream")]
-        public static const bradybunch_fnt:Class;
-
-        [Embed(source="../assets/fonts/1x/bradybunch.png")]
-        public static const bradybunch:Class;
-
-        // Sounds
-
-        [Embed(source="../assets/sounds/flap.mp3")]
-        public static const flap:Class;
-
-        [Embed(source="../assets/sounds/pass.mp3")]
-        public static const pass:Class;
-
-        [Embed(source="../assets/sounds/crash.mp3")]
-        public static const crash:Class;
+       // [Assets.getAsset("../assets/textures/1x/atlas.xml",
+       // Assets.getAsset("../assets/textures/1x/atlas.png"),
+       // Assets.getAsset("../assets/fonts/1x/bradybunch.fnt"),
+       // Assets.getAsset("../assets/fonts/1x/bradybunch.png"),
+       // Assets.getAsset("../assets/sounds/flap.mp3"),
+       // Assets.getAsset("../assets/sounds/pass.mp3"),
+       // Assets.getAsset("../assets/sounds/crash.mp3")]
     }
 }
