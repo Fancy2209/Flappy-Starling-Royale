@@ -57,9 +57,9 @@ package
                 TextField.registerCompositor(bitmapFont, bitmapFont.name);
                 assets.addTexture("atlas", atlasTexture)
                 assets.addTextureAtlas("atlas", new TextureAtlas(atlasTexture, atlasXml))
-                assets.addSound("flap", Assets.getSound("assets/audio/pass.mp3"));
-                assets.addSound("pass", Assets.getSound("assets/audio/flap.mp3"));
-                assets.addSound("crash", Assets.getSound("assets/audio/crash.mp3"));
+                assets.addSound("flap", Assets.getSound("assets/sounds/pass.mp3"));
+                assets.addSound("pass", Assets.getSound("assets/sounds/flap.mp3"));
+                assets.addSound("crash", Assets.getSound("assets/sounds/crash.mp3"));
                 onComplete(assets);
 
             })
