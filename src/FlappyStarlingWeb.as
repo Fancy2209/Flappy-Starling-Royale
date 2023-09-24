@@ -1,10 +1,17 @@
 package
 {
+    import openfl.display.Bitmap;
+    import openfl.display.BitmapData;
     import openfl.display.Sprite;
+    import openfl.display3D.Context3DRenderMode;
+    import openfl.errors.Error;
+    import openfl.geom.Rectangle;
+    import openfl.system.Capabilities;
+    import openfl.display.StageScaleMode;
     import openfl.utils.AssetLibrary;
     import openfl.utils.AssetManifest;
     import openfl.utils.Assets;
-    import openfl.system.Capabilities
+    import openfl.utils.ByteArray;
 
     import starling.core.Starling;
     import starling.events.Event;
@@ -12,7 +19,9 @@ package
     import starling.text.TextField;
     import starling.textures.Texture;
     import starling.textures.TextureAtlas;
-    import starling.utils.AssetManager
+    import starling.utils.AssetManager;
+    import starling.utils.Max;
+    import starling.utils.RectangleUtil;   
     
 
     
@@ -32,7 +41,7 @@ package
 
         private function loadAssets(onComplete:Function):void
         {
-            var assets:* = new AssetManager();
+            var assets:AssetManager = new AssetManager();
             assets.verbose = Capabilities.isDebugger;
 
             var manifest:AssetManifest = new AssetManifest();
@@ -62,14 +71,10 @@ package
                 assets.addSound("crash", Assets.getSound("assets/sounds/crash.mp3"));
                 onComplete(assets);
 
-            }).onError (function (e:Error):void {
-                
-                trace (e);
-                
-            });
+            })
 
         }
-        private function startGame(assets:*):void
+        private function startGame(assets:AssetManager):void
         {
             var game:Game = _starling.root as Game;
             game.start(assets)
