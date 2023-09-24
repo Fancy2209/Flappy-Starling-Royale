@@ -62,10 +62,14 @@ package
                 assets.addSound("crash", Assets.getSound("assets/sounds/crash.mp3"));
                 onComplete(assets);
 
-            })
+            }).onError (function (e:Error):void {
+                
+                trace (e);
+                
+            });
 
         }
-        private function startGame(assets:*):void
+        private function startGame(assets:AssetManager):void
         {
             var game:Game = _starling.root as Game;
             game.start(assets)
