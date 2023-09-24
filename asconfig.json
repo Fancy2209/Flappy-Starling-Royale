@@ -7,14 +7,16 @@
 			"JS"
 		],
 		"output": "./",
+		"html-template": "template.html",
 		"source-path": [
 			"src"
 		],
 		"external-library-path": [
-            "node_modules/openfl/dist/openfl.swc",
-			"node_modules/starling-framework/dist/starling.swc"
+			"node_modules/starling-framework/dist/starling.swc",
+            "node_modules/openfl/dist/openfl.swc"
+			
         ]
 	},
-	"mainClass": "FlappyStarlingWeb",
+	"mainClass": "Main",
 	"copySourcePathAssets": true
 }

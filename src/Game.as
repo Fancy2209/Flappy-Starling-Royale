@@ -14,7 +14,6 @@ package
     import starling.text.TextFormat;
     import starling.utils.Align;
     import starling.utils.Color;
-    import starling.animation.Juggler;
 
     public class Game extends Sprite
     {
@@ -67,13 +66,13 @@ package
             _title.alpha = 0;
             _title.topScore = topScore;
 
-            starling.animation.Juggler.tween(_title, 1.0, { alpha: 1.0 });
+            Starling.current.juggler.tween(_title, 1.0, { alpha: 1.0 });
         }
 
         private function hideTitle():void
         {
-            starling.animation.Juggler.removeTweens(_title);
-            starling.animation.Juggler.tween(_title, 0.5, { alpha: 0.0 });
+            Starling.current.juggler.removeTweens(_title);
+            Starling.current.juggler.tween(_title, 0.5, { alpha: 0.0 });
         }
 
         private function onEnterFrame(event:Event, passedTime:Number):void
@@ -86,7 +85,7 @@ package
             if (_score > topScore)
                 topScore = _score;
 
-            starling.animation.Juggler.delayCall(restart, 1.5);
+            Starling.current.juggler.delayCall(restart, 1.5);
             assets.playSound("crash");
         }
 
