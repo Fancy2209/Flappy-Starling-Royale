@@ -1,17 +1,10 @@
 package
 {
-    import openfl.display.Bitmap;
-    import openfl.display.BitmapData;
     import openfl.display.Sprite;
-    import openfl.display3D.Context3DRenderMode;
-    import openfl.errors.Error;
-    import openfl.geom.Rectangle;
     import openfl.system.Capabilities;
-    import openfl.display.StageScaleMode;
     import openfl.utils.AssetLibrary;
     import openfl.utils.AssetManifest;
     import openfl.utils.Assets;
-    import openfl.utils.ByteArray;
 
     import starling.core.Starling;
     import starling.events.Event;
@@ -19,9 +12,7 @@ package
     import starling.text.TextField;
     import starling.textures.Texture;
     import starling.textures.TextureAtlas;
-    import starling.utils.AssetManager;
-    import starling.utils.Max;
-    import starling.utils.RectangleUtil;   
+    import starling.assets.AssetManager;
     
 
     
@@ -64,11 +55,11 @@ package
                 var bradybunchXml:String = Assets.getText("assets/fonts/1x/bradybunch.fnt");
                 var bitmapFont:BitmapFont = new BitmapFont(bradybunchTexture, bradybunchXml);
                 TextField.registerCompositor(bitmapFont, bitmapFont.name);
-                assets.addTexture("atlas", atlasTexture)
-                assets.addTextureAtlas("atlas", new TextureAtlas(atlasTexture, atlasXml))
-                assets.addSound("flap", Assets.getSound("assets/sounds/pass.mp3"));
-                assets.addSound("pass", Assets.getSound("assets/sounds/flap.mp3"));
-                assets.addSound("crash", Assets.getSound("assets/sounds/crash.mp3"));
+                assets.addAsset("atlas", atlasTexture)
+                assets.addAsset("atlas", new TextureAtlas(atlasTexture, atlasXml))
+                assets.addAsset("flap", Assets.getSound("assets/sounds/pass.mp3"));
+                assets.addAsset("pass", Assets.getSound("assets/sounds/flap.mp3"));
+                assets.addAsset("crash", Assets.getSound("assets/sounds/crash.mp3"));
                 onComplete(assets);
 
             })
