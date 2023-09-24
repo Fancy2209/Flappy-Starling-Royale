@@ -8,12 +8,13 @@
     "asconfigc": "^1.8.0",
     "cpx": "^1.5.0",
     "openfl": "^8.9.6",
-    "starling-framework": "^2.5.1"
+    "starling-framework": "^2.5.1",
+    "howler": "^2.2.4"
   },
   "scripts": {
     "build": "npm run build:dev",
-    "build:dev": "cpx node_modules/openfl/dist/openfl.min.js bin/js-debug && cpx node_modules/starling-framework/dist/starling.min.js bin/js-debug && asconfigc --debug=true",
-    "build:prod": "cpx node_modules/openfl/dist/openfl.min.js bin/js-release && cpx node_modules/starling-framework/dist/starling.min.js bin/js-release && asconfigc --debug=false",
+    "build:dev": "cpx node_modules/openfl/dist/openfl.min.js bin/js-debug && cpx node_modules/starling-framework/dist/starling.min.js bin/js-debug && cpx node_modules/openfl/dist/howler.min.js bin/js-debug && asconfigc --debug=true",
+    "build:prod": "cpx node_modules/openfl/dist/openfl.min.js bin/js-release && cpx node_modules/starling-framework/dist/starling.min.js bin/js-release && cpx node_modules/openfl/dist/howler.min.js bin/js-release && asconfigc --debug=false",
     "start": "npm run start:dev",
     "start:dev": "npm run build:dev && royale serve:debug",
     "start:prod": "npm run build:prod && royale serve:release"
