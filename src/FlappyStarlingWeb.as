@@ -32,7 +32,7 @@ package
 
         private function loadAssets(onComplete:Function):void
         {
-            var assets:AssetManager = new AssetManager();
+            var assets:* = new AssetManager();
             assets.verbose = Capabilities.isDebugger;
 
             var manifest:AssetManifest = new AssetManifest();
@@ -69,7 +69,7 @@ package
             });
 
         }
-        private function startGame(assets:AssetManager):void
+        private function startGame(assets:*):void
         {
             var game:Game = _starling.root as Game;
             game.start(assets)
