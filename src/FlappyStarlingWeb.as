@@ -41,6 +41,7 @@ package
             manifest.addBitmapData("assets/textures/1x/atlas.png");
             manifest.addFont("bradybunch");
             manifest.addBitmapData("assets/fonts/1x/bradybunch.png");
+            manifest.addText("assets/fonts/1x/bradybunch.fnt")
             manifest.addSound(["assets/sounds/flap.mp3"]);
             manifest.addSound(["assets/sounds/pass.mp3"]);
             manifest.addSound(["assets/sounds/crash.mp3"]);
