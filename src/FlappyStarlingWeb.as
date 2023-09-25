@@ -60,6 +60,7 @@ package
                 assets.addAsset("pass", Assets.getSound("assets/sounds/pass.mp3"));
                 assets.addAsset("flap", Assets.getSound("assets/sounds/flap.mp3"));
                 assets.addAsset("crash", Assets.getSound("assets/sounds/crash.mp3"));
+                onComplete(assets);
             })
 
         }
