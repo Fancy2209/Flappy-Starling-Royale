@@ -54,11 +54,11 @@ package
                 var bradybunchTexture:Texture = Texture.fromBitmapData(Assets.getBitmapData("assets/fonts/1x/bradybunch.png"), false);
                 var bradybunchXml:String = Assets.getText("assets/fonts/1x/bradybunch.fnt");
                 var bitmapFont:BitmapFont = new BitmapFont(bradybunchTexture, bradybunchXml);
-                TextField.registerCompositor(bitmapFont, bitmapFont.name);
+                TextField.registerCompositor(bitmapFont, "bradybunch");
                 assets.addAsset("atlas", atlasTexture)
                 assets.addAsset("atlas", new TextureAtlas(atlasTexture, atlasXml))
-                assets.addAsset("flap", Assets.getSound("assets/sounds/pass.mp3"));
-                assets.addAsset("pass", Assets.getSound("assets/sounds/flap.mp3"));
+                assets.addAsset("pass", Assets.getSound("assets/sounds/pass.mp3"));
+                assets.addAsset("flap", Assets.getSound("assets/sounds/flap.mp3"));
                 assets.addAsset("crash", Assets.getSound("assets/sounds/crash.mp3"));
                 onComplete(assets);
 
