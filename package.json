@@ -17,7 +17,7 @@
     "build:dev": "cpx node_modules/openfl/dist/openfl.min.js bin/js-debug && cpx node_modules/starling-framework/dist/starling.min.js bin/js-debug && cpx node_modules/howler/dist/howler.min.js bin/js-debug && cpx node_modules/pako/dist/pako.min.js bin/js-debug && asconfigc --debug=true",
     "build:prod": "cpx node_modules/openfl/dist/openfl.min.js bin/js-release && cpx node_modules/starling-framework/dist/starling.min.js bin/js-release && cpx node_modules/howler/dist/howler.min.js bin/js-release && cpx node_modules/pako/dist/pako.min.js bin/js-release && asconfigc --debug=false",
     "start": "npm run start:dev",
-    "start:dev": "npm run build:dev && royale serve:debug",
-    "start:prod": "npm run build:prod && royale serve:release"
+    "start:dev": "npm run build:dev && http-server bin/js-debug",
+    "start:prod": "npm run build:prod && http-server bin/js-release"
   }
 }
