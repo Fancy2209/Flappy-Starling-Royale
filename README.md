@@ -1,4 +1,4 @@
-# Flappy-Starling
+# Flappy-Starling-Royale
 Port of [Flappy Starling](https://github.com/gamua/flappy-starling) to Apache Royale
 
 # Original Readme
